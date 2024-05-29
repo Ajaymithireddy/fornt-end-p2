@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ajaymithireddyforntendp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ajaymithireddyforntendp
+  template:
+    metadata:
+      labels:
+        app: ajaymithireddyforntendp 
+    spec:
+      containers:
+        - name: ajaymithireddyforntendp 
+          image: mycotainer.azurecr.io/ajaymithireddyforntendp
+          ports:
+          - containerPort: 8009
